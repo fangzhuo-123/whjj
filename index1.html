@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let money1 = 0
+			let money2 = 0
+			let money3  = 0
+			while(true){
+			let re = +prompt(`
+			有以下商品：
+			水 2元 10件
+			可乐 3元 10件 
+			牛奶 5元 10件
+			
+			请选择您的操作：
+			1.补货
+			2.出售
+			`)
+			switch(re){
+				case 1:
+				let name = +prompt(`请选择你要补充的商品:
+				1.水
+				2.可乐
+				3.牛奶
+				`)
+				switch(name){
+					case 1:
+					let a = +prompt('请输入补充水的数量')
+					a = a + 10
+					alert(`补货成功，水还剩${a}件`)
+					break
+					case 2:
+					let b = +prompt('请输入补充可乐的数量')
+					b = b + 10
+					alert(`补货成功，可乐还剩${b}件`)
+					break
+					case 1:
+					let c = +prompt('请输入补充牛奶的数量')
+					c = c + 10
+					alert(`补货成功，牛奶还剩${c}件`)
+					break
+				}
+				break
+				//switchname
+			//switchre
+			case 2:
+			let name1 = +prompt(`请选择你要出售的商品:
+			1.水
+			2.可乐
+			3.牛奶
+			`)
+			switch(name1){
+				case 1:
+				let s = +prompt('请输入出售水的数量')
+				let p = +prompt('请输入支付面额')
+				money1 = s * 2
+				if(money1 > p){
+					alert('您的钱不够')
+				}else{
+					alert(`支付成功，找您${p - money1}元`)
+				}
+				break
+				case 2:
+				let s1 = +prompt('请输入出售可乐数量')
+				let p1 = +prompt('请输入支付面额')
+				money2 = s1 * 3
+				if(money2 > p1){
+					alert('您的钱不够')
+				}else{
+					alert(`支付成功，找您${p1 - money2}元`)
+				}
+				break
+				case 3:
+				let s2 = +prompt('请输入出售牛奶数量')
+				let p2 = +prompt('请输入支付面额')
+				money3 = s2 * 5
+				if(money3 > p2){
+					alert('您的钱不够')
+				}else{
+					alert(`支付成功，找您${p2 - money3}元`)
+				}
+				break
+			}//switchnam1
+			break
+			
+			}//w
+		}
+		</script>
+		
+	</body>
+</html>
